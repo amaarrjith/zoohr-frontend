@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>REQUEST LEAVE | ZOONDIA</h4>
+        </div>
+        <div class="input-fields">
+            <form (ngSubmit)="submit()">
+           
+            <input type="date" id="emp_amount" name="date" placeholder="" [(ngModel)]="leave.date">
+            <select name="reason" id="" [(ngModel)]="leave.reason">
+                <option value="0">Choose Reason</option>
+                <option value="sick">Sick-Leave</option>
+                <option value="casual">Casual-Leave</option>
+                <option value="half-day">Half-Day</option>
+                
+                
+
+            </select>
+            
+            <button class="add" type="submit"> REQUEST LEAVE </button>
+            </form>
+        </div>
+    </div>
+</div>

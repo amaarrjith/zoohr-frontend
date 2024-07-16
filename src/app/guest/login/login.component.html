@@ -1,0 +1,25 @@
+
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h4>ZOONDIA | LOGIN</h4>
+            </div>
+        </nav>
+        <div class="home">
+            
+        <div class="login">
+            <form (ngSubmit)="submit()">
+            <label for="username">Enter ZOOHR ID : </label>
+            <input type="text" name="username" id="username" [(ngModel)]="login.username"><br><br>
+            <label for="username">Enter Password : </label>
+            <input type="password" id="password" name="password" [(ngModel)]="login.password"><br><br>
+            
+            
+            
+            <button type="submit"><b>Log IN</b></button>
+            
+            </form>
+            <div class="password"><a href="/forgetpassword">Forget Password ?</a></div>
+        </div>
+        </div>
+    </div>

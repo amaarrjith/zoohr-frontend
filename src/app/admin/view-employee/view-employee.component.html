@@ -1,0 +1,30 @@
+
+
+
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>VIEW EMPLOYEE | ZOONDIA</h4>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Emplyoee Name</th>
+                    <th>Post</th>
+                    <th>Basic Pay</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr *ngFor = "let data of emparray">
+                    <td>{{data.employee_id}}</td>
+                    <td>{{data.employee_name}}</td>
+                    <td>{{data.post}}</td>
+                    <td>{{data.basic_pay}}</td>
+                    <td><button class="primary" [routerLink]="['/adminmaster/empedit',data.employee_id]">Edit</button></td>
+                    <td><button class="danger" (click)="delete(data.employee_id)">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

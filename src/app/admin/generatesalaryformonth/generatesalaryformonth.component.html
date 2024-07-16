@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>GENERATE SALARY FOR THIS MONTH | ZOONDIA</h4>
+        </div>
+        <select name="type" id="type" [(ngModel)]="employee.emp_id">
+            
+            <option value="0">Choose Employee</option>
+            <option *ngFor="let item of employeearray" value="{{item.employee_id}}">{{item.employee_name}}</option>
+            
+        </select>
+        <button class="add" (click)="proceed()" type="submit"> PROCEED</button>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Emplyoee Name</th>
+                    <th>Salary Date</th>
+                    <th>Salary For</th>
+                    <th>Basic Pay</th>
+                    <th>Deductions</th>
+                    <th>Bonus</th>
+                    <th>Total Amount</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr *ngFor = "let data of salaryarray">
+                    <td>{{data.salary_id}}</td>
+                    <td>{{data.employee_name}}</td>
+                    <td>{{data.salary_date}}</td>
+                    <td>{{data.salary_month}}</td>
+                    <td>{{data.base_package}}</td>
+                    <td>{{data.deducted_amount}}</td>
+                    <td>{{data.bonus_amount}}</td>
+                    <td>{{data.total_amount}}</td>
+                    
+                    <td><button class="success" (click)="generate(data.salary_id)">Generate</button></td>
+                    <td><button class="danger" (click)="delete(data.salary_id)">Delete</button></td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</div>

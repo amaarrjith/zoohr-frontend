@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>ADD BONUS / REDUCTION TO EMPLOYEE | ZOONDIA</h4>
+        </div>
+        <div class="input-fields">
+            <form (ngSubmit)="submit()">
+                <select name="type" id="type" [(ngModel)]="bonus.type">
+            
+                    <option value="0">Choose Type</option>
+                    <option value="1">Add Bonus</option>
+                    <option value="2">Add Reduction</option>
+                </select>
+                <br><br>
+                <select name="employee_id" id="emp" [(ngModel)]="bonus.employee_id">
+                
+                    <option value="0">Choose Employee</option>
+                    <option *ngFor="let data of emparray" value="{{data.employee_id}}">{{data.employee_name}}</option>
+                </select>
+                <input type="number" id="emp_amount" name="emp_amount" placeholder="Enter Amount" [(ngModel)]="bonus.emp_amount">
+                <input type="text" id="reason" name="reason" placeholder="Enter Reason" [(ngModel)]="bonus.reason"><br><br>
+                <button class="add" type="submit"> ADD BONUS</button>
+            </form>
+        </div>
+    </div>
+</div>

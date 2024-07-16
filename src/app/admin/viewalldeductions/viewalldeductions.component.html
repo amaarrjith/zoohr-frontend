@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>VIEW LEAVE DEDUCTION DETAILS | ZOONDIA</h4>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee Name</th>
+                    <th>Deducted Amount</th>
+                    <th>Reason</th>
+                    <th>Leave Taken On</th>
+                    <th>Deducted On</th>
+                    
+                </tr>
+                <tr *ngFor = "let data of deductionarray">
+                    <td>{{data.id}}</td>
+                    <td>{{data.employee_name}}</td>
+                    <td>{{data.deducted_amount}}</td>
+                    <td>{{data.deducted_reason}}</td>
+                    <td>{{data.leave_taken}}</td>
+                    <td>{{data.month}}</td>
+                    
+                   
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

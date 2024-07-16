@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>VIEW LEAVE REQUESTS | ZOONDIA</h4>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Bonus Amount</th>
+                    <th>Reason</th>
+                    <th>Bonus Month</th>
+                    
+                </tr>
+                <tr *ngFor = "let data of bonusarray">
+                    <td>{{data.id}}</td>
+                    <td>{{data.bonus_amount}}</td>
+                    <td>{{data.reason}}</td>
+                    <td>{{data.month}}</td>
+                    
+                   
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

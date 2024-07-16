@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>VIEW LEAVE REQUESTS | ZOONDIA</h4>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>LEAVE ID</th>
+                    <th>Leave Requested</th>
+                    <th>Leave Date</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    
+                </tr>
+                <tr *ngFor = "let data of leavearray">
+                    <td>{{data.leave_id}}</td>
+                    <td>{{data.requested_on}}</td>
+                    <td>{{data.leave_date}}</td>
+                    <td>{{data.reason}}</td>
+                    <td><b><span *ngIf="data.status ==='APPROVED'" style="color: green;">{{data.status}}</span><span *ngIf="data.status ==='NOT-APPROVED'" style="color: RED;">{{data.status}}</span></b></td>
+                   
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

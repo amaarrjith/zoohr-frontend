@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>VIEW SALARY DETAILS | ZOONDIA</h4>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Emplyoee Name</th>
+                    <th>Salary Date</th>
+                    <th>Salary For</th>
+                    <th>Basic Pay</th>
+                    <th>Deductions</th>
+                    <th>Bonus</th>
+                    <th>Total Amount</th>
+                    <th></th>
+                    
+                </tr>
+                
+                <tr *ngFor = "let data of salaryarray">
+                    <td>{{data.salary_id}}</td>
+                    <td>{{data.employee_name}}</td>
+                    <td>{{data.salary_date}}</td>
+                    <td>{{data.salary_month}}</td>
+                    <td>{{data.base_package}}</td>
+                    <td>{{data.deducted_amount}}</td>
+                    <td>{{data.bonus_amount}}</td>
+                    <td>{{data.total_amount}}</td>
+                
+                    <td><b><span *ngIf="data.status==='APPROVED'" style="color:green">APPROVED</span>
+                        <span *ngIf="data.status==='NOT-APPROVED'" style="color:rgb(255, 0, 0)">NOT-APPROVED</span></b></td>
+                </tr>
+                <tr *ngFor = "let data of viewarray">
+                    <td>{{data.salary_id}}</td>
+                    <td>{{data.employee_name}}</td>
+                    <td>{{data.salary_date}}</td>
+                    <td>{{data.salary_month}}</td>
+                    <td>{{data.base_package}}</td>
+                    <td>{{data.deducted_amount}}</td>
+                    <td>{{data.bonus_amount}}</td>
+                    <td>{{data.total_amount}}</td>
+                
+                    <td><b><span *ngIf="data.status==='APPROVED'" style="color:green">APPROVED</span>
+                        <span *ngIf="data.status==='NOT-APPROVED'" style="color:rgb(255, 0, 0)">NOT-APPROVED</span></b></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>

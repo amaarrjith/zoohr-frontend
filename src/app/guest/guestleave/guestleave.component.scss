@@ -1,0 +1,47 @@
+.container{
+    padding: 10px;
+    float: left;
+    width: 73%;
+}
+
+.heading{
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+.input-fields{
+    width:100%;
+    padding: 10px;
+    
+    text-align: left;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.input-fields select{
+    padding: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-fields input{
+    padding: 20px;
+    width: 96.8%;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+button{
+    padding:20px;
+    width: 100%;
+    letter-spacing: 2px;
+    background-color: rgb(47, 180, 47);
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+}

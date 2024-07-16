@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo"><h4>ZOONDIA | HOME</h4></div>
+        <div class="list">
+        <h4 style="margin-right: 20px;">Welcome {{emp_name}}</h4>
+        </div>
+    </nav>
+    <div class="side-bar">
+        <li><a href="/guestmaster/guesthome">Home</a></li>
+        <li><a href="/guestmaster/guestleaveview">View Leave Request</a></li>
+        
+        <li><a href="/guestmaster/guestleave">Request Leave</a></li>
+        
+        <li><a href="/guestmaster/guestsalaryview">View Salary Details</a></li>
+        <li><a href="/guestmaster/viewbonus">View Bonus Details</a></li>
+        <li><a href="/guestmaster/viewdeduction">View Leave Deduction Details</a></li>
+        <li><a href="/guestmaster/viewotherdeduction">View Other Deduction Details</a></li>
+        <li class="logout" (click)="logout()"><a>Logout Here</a></li>
+    </div>
+    
+    <router-outlet></router-outlet>
+</body>
+
+</html>
