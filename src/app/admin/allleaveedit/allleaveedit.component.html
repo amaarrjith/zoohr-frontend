@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>UPDATE COMPANY LEAVE POLICY | ZOONDIA</h4>
+        </div>
+        <div class="input-fields">
+            <form (ngSubmit)="submit()">
+                <div class="form-group">
+                    <label for="emp_name">Number of casual leaves per year:</label>
+                    <input type="text" id="emp_name" name="casual" [(ngModel)]="edit.casual">
+                    
+                </div>
+            
+                <div class="form-group">
+                    <label for="emp_email">Number of sick leaves per year:</label>
+                    <input type="text" id="emp_email" name="sick" [(ngModel)]="edit.sick">
+                    
+                </div>
+            
+                <div class="form-group">
+                    <label for="emp_post">Number of half leaves per year:</label>
+                    <input type="text" id="emp_post" name="half" [(ngModel)]="edit.half">
+                    
+                </div>
+            
+               
+                <button class="add" type="submit">UPDATE</button>
+            </form>
+            
+        </div>
+    </div>
+</div>

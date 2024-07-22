@@ -1,0 +1,56 @@
+
+
+
+<div class="container">
+    <div class="input">
+        <div class="heading">
+            <h4>UPDATE LEAVE | ZOONDIA</h4>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    
+                    <th>CASUAL LEAVE PER YEAR</th>
+                    <th>sick LEAVE PER YEAR</th>
+                    <th>half day LEAVE PER YEAR</th>
+                    
+                    <th></th>
+                    
+                </tr>
+                <tr *ngFor = "let data of array">
+                    
+                    <td>{{data.casual}}</td>
+                    <td>{{data.sick}}</td>
+                    <td>{{data.half}}</td>
+                    <td><button class="primary" [routerLink]="['/adminmaster/allleaveedit',data.id]">EDIT</button></td>
+                    
+                </tr>
+            </table>
+            <button (click)="redirect()" *ngIf="add === 'add' "class="success">ADD LEAVE DETAILS</button>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    
+                    <th>CASUAL LEAVE PER MONTH</th>
+                    <th>sick LEAVE PER MONTH</th>
+                    <th>half day LEAVE PER MONTH</th>
+                    
+                    <th></th>
+                    
+                </tr>
+                <tr *ngFor = "let data of montharray">
+                    
+                    <td>{{data.casual}}</td>
+                    <td>{{data.sick}}</td>
+                    <td>{{data.half}}</td>
+                    <td><button class="primary" [routerLink]="['/adminmaster/monthlyleaveedit',data.id]">EDIT</button></td>
+                    
+                </tr>
+            </table>
+            <button (click)="redirecttomonth()" *ngIf="addmonth === 'add' "class="success">ADD LEAVE DETAILS</button>
+        </div>
+        
+    </div>
+    
+</div>

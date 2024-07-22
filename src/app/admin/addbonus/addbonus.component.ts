@@ -49,7 +49,7 @@ export class AddbonusComponent implements OnInit{
           location.reload()
         }
         else{
-          alert("Enter Value To Proceed")
+          alert("Choose Bonus Or Reduction")
         }
       
     })

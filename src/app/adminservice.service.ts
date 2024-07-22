@@ -1,5 +1,6 @@
 import { HttpClient, HttpContext } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Form } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -85,5 +86,26 @@ export class AdminserviceService {
   }
   deletesalaryall(salary_id:any){
     return this.http.get(`${this.baseUrl}deletesalaryall/${salary_id}`)
+  }
+  gethrleave(){
+    return this.http.get(`${this.baseUrl}gethrleave`)
+  }
+  updateleaveall(updateForm:FormData,id:any){
+    return this.http.post(`${this.baseUrl}updateleaveall/${id}`,updateForm)
+  }
+  hrleaveget(){
+    return this.http.get(`${this.baseUrl}hrleaveget`)
+  }
+  addleavehr(addForm:FormData){
+    return this.http.post(`${this.baseUrl}hrleaveget`,addForm)
+  }
+  hrmonthleave(){
+    return this.http.get(`${this.baseUrl}hrmonthleave`)
+  }
+  updateleavemonth(updateForm:FormData,editid:any){
+    return this.http.post(`${this.baseUrl}updatemonthleave/${editid}`,updateForm)
+  }
+  addleavehrformonth(addForm:FormData){
+    return this.http.post(`${this.baseUrl}hrmonthleave`,addForm)
   }
 }

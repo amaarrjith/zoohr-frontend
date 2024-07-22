@@ -11,18 +11,20 @@
                 <tr>
                     <th>ID</th>
                     <th>Emplyoee Name</th>
+                    <th>Mail-ID</th>
                     <th>Post</th>
                     <th>Basic Pay</th>
                     <th></th>
                     <th></th>
                 </tr>
-                <tr *ngFor = "let data of emparray">
-                    <td>{{data.employee_id}}</td>
+                <tr *ngFor = "let data of emparray , let i = index">
+                    <td>{{i+1}}</td>
                     <td>{{data.employee_name}}</td>
+                    <td>{{data.email}}</td>
                     <td>{{data.post}}</td>
                     <td>{{data.basic_pay}}</td>
-                    <td><button class="primary" [routerLink]="['/adminmaster/empedit',data.employee_id]">Edit</button></td>
-                    <td><button class="danger" (click)="delete(data.employee_id)">Delete</button></td>
+                    <td><button class="primary" [routerLink]="['/adminmaster/empedit',data.employee_id]">EDIT</button></td>
+                    <td><button class="danger" (click)="delete(data.employee_id)">DELETE</button></td>
                 </tr>
             </table>
         </div>

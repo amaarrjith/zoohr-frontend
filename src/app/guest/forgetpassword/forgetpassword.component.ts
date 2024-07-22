@@ -20,8 +20,9 @@ export class ForgetpasswordComponent implements OnInit{
     this.services.forgetpassword(PasswordForm).subscribe((response:any)=>{
       console.log(response)
       if (response.success === true){
+        alert('OTP Has Been Sent To Mail-ID')
         localStorage.setItem('loginid',this.password.username)
-        window.location.href="/changepassword"
+        window.location.href="/otp"
 
       }
       else if(response.fail === true){

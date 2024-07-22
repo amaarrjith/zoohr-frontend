@@ -1,0 +1,26 @@
+
+<div class="container">
+    <nav>
+        <div class="logo">
+            <h4>ZOONDIA | SUBMIT OTP</h4>
+        </div>
+    </nav>
+    <div class="home">
+        
+    <div class="login">
+        <form (ngSubmit)="submit()">
+            <label for="otp">Enter OTP:</label><br><br>
+            <input type="text" name="otp1" id="otp1" maxlength="1" pattern="[0-9]" [(ngModel)]="otp.otp1" #input1 (input)="onInput($event, 2)">
+            <input type="text" name="otp2" id="otp2" maxlength="1" pattern="[0-9]" [(ngModel)]="otp.otp2" #input2 (input)="onInput($event, 3)">
+            <input type="text" name="otp3" id="otp3" maxlength="1" pattern="[0-9]" [(ngModel)]="otp.otp3" #input3 (input)="onInput($event, 4)">
+            <input type="text" name="otp4" id="otp4" maxlength="1" pattern="[0-9]" [(ngModel)]="otp.otp4" #input4 (input)="onInput($event, null)">
+
+            <br><br>
+            
+            <button type="submit" class="button success"><b>SUBMIT</b></button>
+            <button type="button" class="button danger" (click)="home()"><b>BACK TO HOME</b></button>
+        </form>
+        
+    </div>
+    </div>
+</div>

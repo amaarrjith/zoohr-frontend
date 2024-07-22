@@ -75,4 +75,10 @@ export class GuestservivcesService {
   getsalarymonthbyid(emp_id:any){
     return this.http.get(`${this.baseUrl}getsalarymonthbyid/${emp_id}`)
   }
+  otp(otpForm:FormData){
+    return this.http.post(`${this.baseUrl}otp_list`,otpForm)
+  }
+  clearotp(loginid:any){
+    return this.http.delete(`${this.baseUrl}clearotp/${loginid}`)
+  }
 }

@@ -4,29 +4,52 @@
             <h4>ADD EMPLOYEE | ZOONDIA</h4>
         </div>
         <div class="input-fields">
-        <form (ngSubmit)="submit()">
-            <div class="label">
+            <form (ngSubmit)="submit()">
+                <div class="form-group">
+                    <label for="emp_name">Enter Employee Name:</label>
+                    <input type="text" id="emp_name" name="emp_name" [(ngModel)]="emp.emp_name">
+                    <span *ngIf="emp_error.emp_name === 'none'" style="color: red;">Enter Employee Name To Continue !!</span>
+                </div>
             
-                <br>
-                <label for="emp_name">Enter Employee Name   </label><br><br><br>
-                <label for="emp_post">Enter Employee Post  </label><br><br><br>
-                <label for="emp_pay">Enter Basic Pay  </label><br><br><br>
-                <label for="emp_login">Create ZOOHR LoginID  </label><br><br><br>
-                <label for="emp_pass">Create PASSCODE  </label><br><br><br>
-                <label for="emp_repass">Re-Type PASSCODE  </label><br><br>
-            </div>
-            <div class="inputs">
-                <input type="text" id="emp_name" name="emp_name" [(ngModel)]="emp.emp_name"><br><br>
-                <input type="text" id="emp_post" name="emp_post" [(ngModel)]="emp.emp_post"><br><br>
-                <input type="text" id="emp_pay" name="emp_pay" [(ngModel)]="emp.emp_pay"><br><br>
-                <input type="text" id="emp_login" name="emp_login" [(ngModel)]="emp.emp_login"><br><br>
-                <input type="password" id="emp_pass" name="emp_pass" [(ngModel)]="emp.emp_pass"><br><br>
-                <input type="text" id="emp_repass" name="emp_repass" [(ngModel)]="emp.emp_repass"><br><br>
+                <div class="form-group">
+                    <label for="emp_email">Enter Employee Mail-ID:</label>
+                    <input type="text" id="emp_email" name="emp_email" [(ngModel)]="emp.emp_email">
+                    <span *ngIf="emp_error.emp_email === 'none'" style="color: red;">Enter Employee Email To Continue !!</span>
+                </div>
             
-            </div>
+                <div class="form-group">
+                    <label for="emp_post">Enter Employee Post:</label>
+                    <input type="text" id="emp_post" name="emp_post" [(ngModel)]="emp.emp_post">
+                    <span *ngIf="emp_error.emp_post === 'none'" style="color: red;">Enter Employee Post To Continue !!</span>
+                </div>
             
-            <button class="add" type="submit"> ADD EMPLOYEE</button>
-        </form>
+                <div class="form-group">
+                    <label for="emp_pay">Enter Basic Pay:</label>
+                    <input type="text" id="emp_pay" name="emp_pay" [(ngModel)]="emp.emp_pay">
+                    <span *ngIf="emp_error.emp_pay === 'none'" style="color: red;">Enter Basic Pay To Continue !!</span>
+                </div>
+            
+                <div class="form-group">
+                    <label for="emp_login">Create ZOOHR LoginID:</label>
+                    <input type="text" id="emp_login" name="emp_login" [(ngModel)]="emp.emp_login">
+                    <span *ngIf="emp_error.emp_login === 'none'" style="color: red;">Enter LoginID To Continue !!</span>
+                </div>
+            
+                <div class="form-group">
+                    <label for="emp_pass">Create PASSCODE:</label>
+                    <input type="password" class="form-control" [(ngModel)]="emp.emp_pass" name="emp_pass">
+                    <span *ngIf="emp_error.emp_pass === 'none'" style="color: red;">Enter PASSCODE To Continue !!</span>
+                </div>
+            
+                <div class="form-group">
+                    <label for="emp_repass">Re-Type PASSCODE:</label>
+                    <input type="password" id="emp_repass" name="emp_repass" [(ngModel)]="emp.emp_repass">
+                    <span *ngIf="emp_error.emp_repass === 'none'" style="color: red;">Re-Type PASSCODE To Continue !!</span>
+                </div>
+            
+                <button class="add" type="submit">ADD EMPLOYEE</button>
+            </form>
+            
         </div>
     </div>
 </div>

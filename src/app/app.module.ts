@@ -28,6 +28,12 @@ import { ViewotherdeductionComponent } from './guest/viewotherdeduction/viewothe
 import { ViewallbonusComponent } from './admin/viewallbonus/viewallbonus.component';
 import { ViewalldeductionsComponent } from './admin/viewalldeductions/viewalldeductions.component';
 import { ViewallotherdeductionsComponent } from './admin/viewallotherdeductions/viewallotherdeductions.component';
+import { OtpComponent } from './guest/otp/otp.component';
+import { UpdateleaveComponent } from './admin/updateleave/updateleave.component';
+import { AllleaveeditComponent } from './admin/allleaveedit/allleaveedit.component';
+import { AddleaveforhrComponent } from './admin/addleaveforhr/addleaveforhr.component';
+import { MonthlyleaveeditComponent } from './admin/monthlyleaveedit/monthlyleaveedit.component';
+import { AddleavemonthComponent } from './admin/addleavemonth/addleavemonth.component';
 
 
 @NgModule({
@@ -56,7 +62,13 @@ import { ViewallotherdeductionsComponent } from './admin/viewallotherdeductions/
     ViewotherdeductionComponent,
     ViewallbonusComponent,
     ViewalldeductionsComponent,
-    ViewallotherdeductionsComponent
+    ViewallotherdeductionsComponent,
+    OtpComponent,
+    UpdateleaveComponent,
+    AllleaveeditComponent,
+    AddleaveforhrComponent,
+    MonthlyleaveeditComponent,
+    AddleavemonthComponent
   ],
   imports: [
     BrowserModule,

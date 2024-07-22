@@ -24,6 +24,12 @@ import { ViewotherdeductionComponent } from './guest/viewotherdeduction/viewothe
 import { ViewallbonusComponent } from './admin/viewallbonus/viewallbonus.component';
 import { ViewalldeductionsComponent } from './admin/viewalldeductions/viewalldeductions.component';
 import { ViewallotherdeductionsComponent } from './admin/viewallotherdeductions/viewallotherdeductions.component';
+import { OtpComponent } from './guest/otp/otp.component';
+import { UpdateleaveComponent } from './admin/updateleave/updateleave.component';
+import { AllleaveeditComponent } from './admin/allleaveedit/allleaveedit.component';
+import { AddleaveforhrComponent } from './admin/addleaveforhr/addleaveforhr.component';
+import { MonthlyleaveeditComponent } from './admin/monthlyleaveedit/monthlyleaveedit.component';
+import { AddleavemonthComponent } from './admin/addleavemonth/addleavemonth.component';
 
 
 
@@ -32,6 +38,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'forgetpassword',component:ForgetpasswordComponent},
   {path:'changepassword',component:ChangepasswordComponent},
+  {path:'otp',component:OtpComponent},
   {path:'guestmaster',component:GuestmasterComponent,
     children:[
       {path:'guesthome',component:GuesthomeComponent},
@@ -55,7 +62,12 @@ const routes: Routes = [
     {path:'generatesalaryformonth',component:GeneratesalaryformonthComponent},
     {path:'viewallbonus',component:ViewallbonusComponent},
     {path:'viewalldeductions',component:ViewalldeductionsComponent},
-    {path:'viewallotherdeductions',component:ViewallotherdeductionsComponent}
+    {path:'viewallotherdeductions',component:ViewallotherdeductionsComponent},
+    {path:'updateleave',component:UpdateleaveComponent},
+    {path:'allleaveedit/:id',component:AllleaveeditComponent},
+    {path:'addleavehr',component:AddleaveforhrComponent},
+    {path:'monthlyleaveedit/:id',component:MonthlyleaveeditComponent},
+    {path:'addleavemonth',component:AddleavemonthComponent}
     
   ]}
 ];
